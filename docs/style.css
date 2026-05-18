@@ -1,0 +1,94 @@
+body, html {
+    height: 100%;
+    background-image: url("bg.jpg");
+}
+body {
+    font-family: "Patrick Hand", cursive;
+    margin: 0px;
+    background-color: #0a2579;
+    color: #ee62e9;
+}
+.widget {
+    border: 10px inset #095376;
+    padding: 15px;
+    margin: 5px 0;
+    border-radius: 15px;
+    background-color: #b932b4;
+    color: #96d1f4;
+    display: inline-block;
+    vertical-align: top;
+}
+.labs-widget {
+    color: red;
+    background-color: #4a4a4a;
+    border: 10px inset #095376;
+    padding: 15px;
+    margin: 5px 0;
+    border-radius: 15px;
+
+    display: inline-block;
+    vertical-align: top;
+}
+.git-widget {
+    color: #ff8800;
+    background-color: #4a4a4a;
+    border: 10px inset #095376;
+    padding: 15px;
+    margin: 5px 0;
+    border-radius: 15px;
+
+    display: inline-block;
+    vertical-align: top;
+}
+.nav_ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    background-color: #b932b4;
+    border: 5px outset #309edd;
+}
+.nav_ul li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+.nav_ul li a:hover {
+    background-color: #ee62e9;
+}
+.nav_ul li {
+    float: left;
+}
+nav {
+    text-decoration: wavy;
+    padding: 10px;
+    color: #309edd;
+}
+#logoImage {
+    position: absolute;
+    transition: 1s ease-in-out;
+    opacity: 0;
+}
+.visible {
+    opacity: 1;
+}
+.parallax {
+  /* The image used */
+  background-image: url("bg.jpg");
+
+  /* Full height */
+  height: fit-content;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+} 
+.centered {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
