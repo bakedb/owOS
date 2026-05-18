@@ -1,0 +1,14 @@
+#!/bin/bash
+if [ ! -d venv ]; then
+    python -m venv venv || echo "[env] You must have Python installed."
+    source venv/bin/activate
+    pip install -r requirements.txt
+
+else
+    if [ "$1" = "upgrade" ]; then
+        source venv/bin/activate
+        pip install -r requirements.txt
+    else
+        echo "[env] The virtual environment already exists. If you think it is broken, delete it and run this script again."
+    fi
+fi

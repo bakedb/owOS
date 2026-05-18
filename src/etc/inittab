@@ -1,0 +1,6 @@
+# /etc/inittab
+
+::sysinit:/etc/init.d/rcS
+::shutdown:/bin/umount -a -r
+
+ttyS0::respawn:/usr/bin/python3 /usr/bin/init.py

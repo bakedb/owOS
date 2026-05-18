@@ -1,0 +1,24 @@
+#!/usr/bin/env python3
+import os, sys
+
+# Define the path to your local venv interpreter
+# (This looks for a 'venv' folder in the same directory as the script)
+script_dir = os.path.dirname(os.path.abspath(__file__))
+parent_dir = os.path.dirname(script_dir)
+venv_python = os.path.join(parent_dir, "venv", "bin", "python")
+
+# Check if already running inside the correct venv
+# sys.prefix changes when a venv is active
+if sys.executable != venv_python and os.path.exists(venv_python):
+    print("[srcpy] Re-launching script inside the virtual environment...")
+    
+    # os.execv replaces the current process with the venv python process
+    os.execv(venv_python, [venv_python] + sys.argv)
+
+
+
+
+
+import sys
+print(os.environ.get("[srcpy] VIRTUAL_ENV", "[srcpy] No VIRTUAL_ENV variable found"))
+print(f"[srcpy] Current Python: {sys.executable}")
