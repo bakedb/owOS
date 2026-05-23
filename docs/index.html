@@ -1,66 +1,133 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>owOS</title>
-<!-- import fonts -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>owOS</title>
+    <!-- import fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 
 </head>
+
 <body>
 
+    <div class="parallax">
 
-<div class="parallax">
+        <div class="centered">
+            <h1>owOS: The operating system you never knew you needed</h1>
+        </div>
 
-<div class="centered">
-<h1>owOS: The operating system that has no reason to exist</h1>
-</div>
+        <div class="centered"><img src="img/start.png"></div>
 
-<div class="centered">
-<h2>6 hours and counting have been <s>wasted</s> properly spent developing this</h2>
-</div>
+        <div class="centered">
+            <img src="https://88x31.kate.pet/madeon_linux.gif">
+            <img src="https://cyber.dabamos.de/88x31/css3.gif">
+            <img src="https://y2k.neocities.org/buttons/srgb-now.png">
+            <img src="https://cyber.dabamos.de/88x31/button25.gif">
+            <img src="https://yesterhost.neocities.org/archive/buttons/button102.gif">
+            <img src="https://yesterhost.neocities.org/archive/buttons/button320.png">
+            <img src="https://git.gay/assets/img/button.svg">
+        </div>
 
-<div class="centered">
-<h1>Includes...</h1>
-</div>
+        <div class="centered">
+            <h2>
+                <label for="repos">
+                    <span onclick="goToRepo(repos)" class="centered">
+                        <font color="white"><u>View Source Code</u></font>
+                    </span>
+                </label>
+            </h2>
+        </div>
 
-<div class="centered">
-<h2>uwush (UnderWhelmingly Underdeveloped SHell)</h2>
-</div>
+        <div class="centered">
+            <select name="repos" id="repos">
+                <option value="git.gay">git.gay</option>
+                <option value="GitHub">GitHub</option>
+            </select>
+        </div>
 
-<div class="centered">
-<img src="https://88x31.kate.pet/right_to_repair_01.jpg">
-<img src="https://88x31.kate.pet/powered-by-debian.gif">
-<img src="https://88x31.kate.pet/madeon_linux.gif">
-<img src="https://cyber.dabamos.de/88x31/css3.gif">
-<img src="https://y2k.neocities.org/buttons/drpepper.gif">
-<img src="https://y2k.neocities.org/buttons/piracy.gif">
-<img src="https://y2k.neocities.org/buttons/srgb-now.png">
-<img src="https://cyber.dabamos.de/88x31/button25.gif">
-<img src="https://yesterhost.neocities.org/archive/buttons/button102.gif">
-<img src="https://yesterhost.neocities.org/archive/buttons/button320.png">
-<img src="https://git.gay/assets/img/button.svg">
-</div>
+        <script>
+            function goToRepo(item) {
+                const dropdown = document.getElementById("repos");
+                const selectedValue = dropdown.value;
 
-</div>
+                if (selectedValue == "git.gay") {
+                    window.location.href = "https://git.gay/bkd/owos";
+                }
+                else if (selectedValue == "GitHub") {
+                    window.location.href = "https://github.com/bakedb/owos";
+                };
+            };
+        </script>
 
-<div class="centered">
-<a href="https://github.com/bakedb"><div class="widget"><img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" width="50" height="50"></div></a>
-<a href="https://git.gay/bkd"><div class="widget"><img src="https://git.gay/assets/img/logo.svg" width="50" height="50"></div></a>
-<a href="https://youtube.com/@thatbakedbeans"><div class="widget"><img src="https://upload.wikimedia.org/wikipedia/commons/0/09/YouTube_full-color_icon_%282017%29.svg" width="50" height="50"></div></a>
-<a href="https://www.twitch.tv/bakedbeanstwitch/"><div class="widget"><img src="https://upload.wikimedia.org/wikipedia/commons/d/d3/Twitch_Glitch_Logo_Purple.svg" width="50" height="50"></div></a>
-<a href="https://orcid.org/0009-0009-8159-9089"><div class="widget"><img src="https://upload.wikimedia.org/wikipedia/commons/0/06/ORCID_iD.svg" width="50" height="50"></div></a>
-<a href="https://osu.ppy.sh/users/38371673"><div class="widget"><img src="https://upload.wikimedia.org/wikipedia/commons/2/29/Osu%21_logo_2024.png" width="50" height="50"></div></a>
+        <div class="centered">
+            <h2>
+                <font color="green"><u>Download Current Version</u></font>
+            </h2>
+        </div>
 
-<img src="https://xenia-images.efi.pages.gay/extinct2.png" width="250">
-</div>
+        <div class="centered">
+            <h1>Includes...</h1>
+        </div>
+        <div class="centered">
+            <div class="included-element">musl C library</div>
+            <div class="included-element">Linux Kernel</div>
+            <a href="#uwush">
+                <div class="included-element-alt">uwush (UnderWhelmingly Underdeveloped SHell)</div>
+            </a>
+        </div>
 
-</div>
+        <div class="centered">
+            <img src="https://xenia-images.efi.pages.gay/extinct2.png" width="250">
+        </div>
 
+        <div class="centered">
+            <h1>
+                <font color="white">Component Info</font>
+            </h1>
+        </div>
 
+        <div class="centered" id="uwush">
+            <h2>uwush (UnderWhelmingly Underdeveloped SHell)</h2>
+        </div>
+        <div class="centered">
+            <p>A shell made in C that... works. At the heart of owOS, you are going to be interacting with this shell
+                all the time, so you better get used to it :p</p>
+        </div>
+        <div class="centered"><img src="img/uwush.png"></div>
+        <div class="centered">
+            <p>Location in codebase: <code>src/usr/bin/uwush.c</code></p>
+        </div>
+
+        <div class="centered">
+            <a href="https://github.com/bakedb">
+                <div class="widget"><img
+                        src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" width="50"
+                        height="50"></div>
+            </a>
+            <a href="https://git.gay/bkd">
+                <div class="widget"><img src="https://git.gay/assets/img/logo.svg" width="50" height="50"></div>
+            </a>
+            <a href="https://youtube.com/@thatbakedbeans">
+                <div class="widget"><img
+                        src="https://upload.wikimedia.org/wikipedia/commons/0/09/YouTube_full-color_icon_%282017%29.svg"
+                        width="50" height="50"></div>
+            </a>
+            <a href="https://www.twitch.tv/bakedbeanstwitch/">
+                <div class="widget"><img
+                        src="https://upload.wikimedia.org/wikipedia/commons/d/d3/Twitch_Glitch_Logo_Purple.svg"
+                        width="50" height="50"></div>
+            </a>
+            <a href="https://orcid.org/0009-0009-8159-9089">
+                <div class="widget"><img src="https://upload.wikimedia.org/wikipedia/commons/0/06/ORCID_iD.svg"
+                        width="50" height="50"></div>
+            </a>
+        </div>
+    </div>
 </body>
+
 </html>
