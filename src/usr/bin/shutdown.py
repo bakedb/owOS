@@ -1,10 +1,10 @@
-import subprocess, sys, time
+import subprocess, sys, time, put
 
 def shutdown():
-    prompt = input("Are you sure you want to shut down the system? [y/N] ")
+    prompt = put.read("Are you sure you want to shut down the system? [y/N] ")
     if prompt in ["y", "Y"]:
-        print("Shutting down...")
-        print("Goodbye :3")
+        put.write("Shutting down...")
+        put.write("Goodbye :3")
         time.sleep(1)
         sys.stdout.flush()
         subprocess.run(["poweroff"])
