@@ -1,6 +1,7 @@
-# /etc/inittab
+::sysinit:/bin/mount -t proc proc /proc
+::sysinit:/bin/mount -t sysfs sysfs /sys
+::sysinit:/bin/mount -t devtmpfs devtmpfs /dev
 
-::sysinit:/etc/init.d/rcS
+tty1::respawn:/usr/bin/uwush
+
 ::shutdown:/bin/umount -a -r
-
-ttyS0::respawn:/usr/bin/python3 /usr/bin/init.py
