@@ -2,6 +2,7 @@
 /buildroot
 /.vscode
 /qemu
+/package-temp
 
 # -- Premade GitHub Python stuff --
 
